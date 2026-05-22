@@ -21,3 +21,6 @@ pnpm-debug.log*
 Thumbs.db
 .vscode/
 .idea/
+
+# scratch renders
+scratch-logo/

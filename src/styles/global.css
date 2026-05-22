@@ -66,22 +66,32 @@ body::before {
 }
 .brand {
   display: grid;
-  grid-template-columns: 3rem 1fr;
+  grid-template-columns: 4.1rem 1fr;
   gap: .7rem;
   align-items: center;
   color: var(--paper-bright);
   text-decoration: none;
 }
 .sigil {
-  width: 3rem;
-  height: 3rem;
+  width: 4.1rem;
+  height: 4.1rem;
   display: grid;
   place-items: center;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(234,223,189,.34);
   border-radius: 50%;
   color: var(--moss);
   font-size: 1.4rem;
-  box-shadow: inset 0 0 1.5rem rgba(93,123,79,.16), 0 0 2rem rgba(93,123,79,.08);
+  background:
+    radial-gradient(circle at 48% 42%, rgba(234,223,189,.98), rgba(211,196,158,.90) 58%, rgba(93,123,79,.35) 100%);
+  box-shadow: inset 0 0 1.4rem rgba(57,38,14,.28), 0 0 2rem rgba(93,123,79,.12);
+  overflow: hidden;
+}
+.logo-medallion img {
+  width: 88%;
+  height: 88%;
+  object-fit: contain;
+  display: block;
+  transform: translate(1px, 2px);
 }
 .brand-text {
   font-family: 'IM Fell English', Georgia, serif;
@@ -91,7 +101,7 @@ body::before {
   text-shadow: 0 2px 0 #000;
 }
 .tagline {
-  margin: .8rem 0 1.4rem 3.8rem;
+  margin: .8rem 0 1.4rem 4.9rem;
   color: var(--moss);
   font-family: 'Special Elite', monospace;
   font-size: .8rem;
