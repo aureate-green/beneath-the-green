@@ -195,3 +195,14 @@ blockquote {
   .main-frame { height: auto; overflow: visible; }
   nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+.site-footer {
+  max-width: 58rem;
+  margin: 1rem auto 0;
+  padding: 1rem 1.2rem 1.4rem;
+  color: rgba(234,223,189,.72);
+  font-family: 'Special Elite', monospace;
+  font-size: .78rem;
+  text-align: center;
+}
+.site-footer p { margin: .35rem 0; font-size: inherit; line-height: 1.45; }
+.site-footer a { color: var(--moss); }
