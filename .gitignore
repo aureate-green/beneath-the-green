@@ -24,3 +24,6 @@ Thumbs.db
 
 # scratch renders
 scratch-logo/
+
+# raw generated image candidates
+public/ChatGPT Image *.png
