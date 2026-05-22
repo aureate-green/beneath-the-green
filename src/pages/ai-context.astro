@@ -1,0 +1,94 @@
+---
+import charterRaw from '../content/reference/charter.md?raw';
+import collaborativeUniverseRaw from '../content/reference/collaborative-universe.md?raw';
+import toneRaw from '../content/world/tone.md?raw';
+
+function stripFrontmatter(markdown) {
+  return markdown.replace(/^---[\s\S]*?---\s*/, '').trim();
+}
+
+const charter = stripFrontmatter(charterRaw);
+const collaborativeUniverse = stripFrontmatter(collaborativeUniverseRaw);
+const tone = stripFrontmatter(toneRaw);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <title>AI Context Packet · Beneath the Green</title>
+    <style>
+      :root { color-scheme: light dark; }
+      body {
+        max-width: 78ch;
+        margin: 2rem auto;
+        padding: 0 1rem 4rem;
+        font-family: Georgia, 'Times New Roman', serif;
+        line-height: 1.55;
+      }
+      h1, h2 { line-height: 1.1; }
+      h1 { margin-bottom: .25rem; }
+      .note {
+        border: 1px solid currentColor;
+        padding: 1rem;
+        margin: 1.5rem 0;
+      }
+      pre {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        border: 1px solid currentColor;
+        padding: 1rem;
+      }
+      hr { margin: 2rem 0; }
+      a { color: currentColor; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Beneath the Green — AI Context Packet</h1>
+      <p><strong>Purpose:</strong> This plain page is meant to be handed directly to an AI system as context for writing stories set in <em>Beneath the Green</em>.</p>
+
+      <section class="note" aria-labelledby="instructions">
+        <h2 id="instructions">Instructions for the AI</h2>
+        <p>Read this entire page before writing. Use it as your working context for stories set in Beneath the Green.</p>
+        <p>Write stories where ordinary human life comes first and the pressure beneath reality is present from the beginning. Do not over-explain the mythology. Preserve mystery. Human care matters, but does not guarantee victory.</p>
+        <p>If the human asks for a story in this universe, follow the Charter and Collaborative Universe notes below.</p>
+      </section>
+
+      <section aria-labelledby="copy-prompt">
+        <h2 id="copy-prompt">Copy/Paste Prompt</h2>
+        <pre>You are writing fiction set in Beneath the Green.
+
+Read and follow the context packet at this URL before writing:
+https://beneath-the-green.pages.dev/ai-context/
+
+Write a story that belongs in this universe. Start with ordinary human trouble. Let the pressure underneath be present from the beginning. Do not over-explain the mythology. Preserve mystery. Keep the camera close to human hands. Human care matters, but does not guarantee victory.</pre>
+      </section>
+
+      <hr />
+
+      <section aria-labelledby="charter">
+        <h2 id="charter">Charter</h2>
+        <pre>{charter}</pre>
+      </section>
+
+      <hr />
+
+      <section aria-labelledby="collaborative-universe">
+        <h2 id="collaborative-universe">Collaborative Universe</h2>
+        <pre>{collaborativeUniverse}</pre>
+      </section>
+
+      <hr />
+
+      <section aria-labelledby="tone">
+        <h2 id="tone">Tone and Aesthetic</h2>
+        <pre>{tone}</pre>
+      </section>
+
+      <hr />
+      <p>Human-readable site: <a href="/">Beneath the Green</a></p>
+    </main>
+  </body>
+</html>
