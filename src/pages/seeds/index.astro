@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContentList from '../../components/ContentList.astro';
+import { getCollection } from 'astro:content';
+const entries = await getCollection('seeds');
+---
+<BaseLayout title="Seeds">
+  <section class="page">
+    <p class="kicker">things not yet buried</p>
+    <h1>Seeds</h1>
+    <p>Characters and story premises waiting for the right storm.</p>
+    <ContentList entries={entries} base="/seeds" />
+  </section>
+</BaseLayout>

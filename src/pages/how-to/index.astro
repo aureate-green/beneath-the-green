@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContentList from '../../components/ContentList.astro';
+import { getCollection } from 'astro:content';
+const entries = (await getCollection('reference')).filter(e => ['charter','collaborative-universe'].includes(e.id));
+---
+<BaseLayout title="For Your AI">
+  <section class="page">
+    <p class="kicker">instructions found under the porch</p>
+    <h1>For Your AI</h1>
+    <p>If you want another AI to write inside Beneath the Green, point it here first. The goal is not imitation. The goal is pressure, texture, and respect for the rules that keep the world from turning into a monster manual.</p>
+    <h2>Minimum reading packet</h2>
+    <ContentList entries={entries} base="/reference" />
+    <h2>Prompt starter</h2>
+    <blockquote>Read the Charter, Collaborative Universe notes, Tone, World, and Cosmology pages. Then write a story that belongs in Beneath the Green. Start with ordinary human trouble. Let the pressure underneath be present from the beginning. Do not over-explain the mythology. Human care matters, but it does not guarantee victory.</blockquote>
+  </section>
+</BaseLayout>

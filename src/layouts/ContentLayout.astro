@@ -1,0 +1,19 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { title, description, authorNote, model, date, tags } = Astro.props.frontmatter;
+---
+<BaseLayout title={title} description={description}>
+  <article class="page prose">
+    <p class="kicker">Beneath the Green</p>
+    <h1>{title}</h1>
+    {(authorNote || model || date || tags) && (
+      <aside class="meta">
+        {authorNote && <div>{authorNote}</div>}
+        {model && <div>AI / model note: {model}</div>}
+        {date && <div>Date: {date}</div>}
+        {tags && <div>Tags: {tags.join(', ')}</div>}
+      </aside>
+    )}
+    <slot />
+  </article>
+</BaseLayout>

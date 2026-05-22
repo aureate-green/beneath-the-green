@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContentList from '../../components/ContentList.astro';
+import { getCollection } from 'astro:content';
+const entries = await getCollection('world');
+---
+<BaseLayout title="World Info">
+  <section class="page">
+    <p class="kicker">field notes / bad maps</p>
+    <h1>World Info</h1>
+    <p>What people know, what they think they know, and what keeps working until it doesn’t.</p>
+    <ContentList entries={entries} base="/world" />
+  </section>
+</BaseLayout>
